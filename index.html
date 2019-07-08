@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>Create Notes</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Notepad</h1>
+    </div>
+    <div class="container">
+        <div class="sidebar categories">
+            <h2>Saved Notes</h2> 
+            <div class="dropdown">  
+                <button type="button" class="btn dropdown-toggle"> Personal <span class="caret"></span></button>
+                 <ul class="dropdown-menu" id="personal">
+                    <li class="view"  onclick="viewNote(event)"> First<i title="Hide Note" class="zmdi zmdi-delete" onclick="Hide(event)"></i> <div class="modal"> <p>To the new programmer, the amateur, I say this: there is no shame in being an amateur. There is some shame in staying an amateur (if you make programming your
+profession, certainly). If you want to practice programming, practice it. Learn every‐
+thing you can, from every source you can. Keep an open mind and—perhaps most
+importantly—question everything. Question every expert. Question every experi‐
+enced programmer. Constantly ask “Why?”</p></div></li>
+                </ul>
+            </div>
+            <div class="dropdown ">  
+                <button type="button" class="btn dropdown-toggle"> Work <span class="caret"></span></button>
+                 <ul class="dropdown-menu" id="work">
+                    <li class="view"  onclick="viewNote(event)">First<i title="Hide Note" class="zmdi zmdi-delete" onclick="Hide(event)"></i> <div class="modal"> <p>To the new programmer, the amateur, I say this: there is no shame in being an amateur. There is some shame in staying an amateur (if you make programming your
+profession, certainly). If you want to practice programming, practice it. Learn every‐
+thing you can, from every source you can. Keep an open mind and—perhaps most
+importantly—question everything. Question every expert. Question every experi‐
+enced programmer. Constantly ask “Why?”</p></div></li>
+                </ul>
+            </div>
+            <div class="dropdown ">  
+                <button type="button" class="btn dropdown-toggle"> Family <span class="caret"></span></button>
+                 <ul class="dropdown-menu" id="family">
+                      <li onclick="viewNote(event)" class="view">First<i title="Hide Note" class="zmdi zmdi-delete" onclick="Hide(event)"></i> <div class="modal"> <p>To the new programmer, the amateur, I say this: there is no shame in being an amateur. There is some shame in staying an amateur (if you make programming your profession, certainly). If you want to practice programming, practice it. Learn everything you can, from every source you can. Keep an open mind and—perhaps most importantly—question everything. Question every expert. Question every experienced programmer. Constantly ask “Why?”</p></div></li>
+                </ul>
+            </div>
+            <div class="dropdown ">  
+                <button type="button" class="btn dropdown-toggle"> Others <span class="caret"></span></button>
+                 <ul class="dropdown-menu" id="others">
+                     <li onclick="viewNote(event)" class="view">First<i title="Hide Note" class="zmdi zmdi-delete" onclick="Hide(event)"></i> <div class="modal"> <p>To the new programmer, the amateur, I say this: there is no shame in being an ama‐
+teur. There is some shame in staying an amateur (if you make programming your
+profession, certainly). If you want to practice programming, practice it. Learn every‐
+thing you can, from every source you can. Keep an open mind and—perhaps most
+importantly—question everything. Question every expert. Question every experi‐
+enced programmer. Constantly ask “Why?”</p></div></li>
+                </ul>
+            </div>
+
+            <div class="clear">
+                <button type="button" class="btn btn-danger"  onclick="Delete(event)"> Clear Notes</button> 
+            </div>
+            
+        </div>
+        <div class="content" id="content-div">
+             <h6>All asteriked fields should be filled</h6>
+            <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle"  onclick="SelectCategory(event)"> Category  <span class="caret"></span></button> *
+               
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li>Personal<input type="checkbox" class="check" value="personal"></li>
+                    <li>Work<input type="checkbox" class="check"  value="work"></li>
+                    <li>Family<input type="checkbox" class="check"  value="family"></li>
+                    <li>Others<input type="checkbox" class="check"  value="others"></li>
+                </ul>
+            </div>
+            <div contenteditable="true" class="note-title style" data-text = "Note Title*" id="title"></div> 
+            <div contenteditable="true" class="note-content col col-12 style" data-text = "Content *" id="content"></div> 
+
+            <div class="action">
+                <input type="button" value="Save" class="btn" onclick="Save(event)">
+                <input type="button" value="Clear" class="btn" onclick="Clear(event)">
+            </div>
+           
+        </div>
+        <!-- btn create new note -->
+    </div>
+    
+    <script src="action.js"></script>
+</body>
+
+</html>
